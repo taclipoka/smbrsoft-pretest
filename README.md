@@ -10,7 +10,7 @@ java -jar smbrsoft-pretest.jar [options] url
 Options:
   -s              use Scanner with regexp instead
   
-  -d <delimiter>  use delimiter, default .,:;!?"[]{}<>/'
+  -d \<delimiter>  use delimiter, default .,:;!?"[]{}<>/'
   
   
 Example usage
