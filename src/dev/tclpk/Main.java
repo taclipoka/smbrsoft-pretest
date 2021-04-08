@@ -24,7 +24,7 @@ public class Main {
                 delimiters = s.replace("\\n", "\n")
                         .replace("\\r", "\r")
                         .replace("\\t", "\t")
-                        .replace("\\", "\"");
+                        .replace("\\\"", "\"");
                 mode = "";
             } else
                 addressList.add(s);
@@ -42,7 +42,8 @@ public class Main {
 
         StreamIterator i;
         if (useScanner)
-            i = new ScannerStreamIterator().setDelimiters(delimiters);
+            i = new ScannerStreamIterator()
+                    .setDelimiters(delimiters);
         else
             i = new SimpleStreamIterator()
                     .setDelimiters(delimiters);

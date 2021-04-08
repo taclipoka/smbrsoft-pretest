@@ -16,7 +16,13 @@ public class ScannerStreamIterator implements StreamIterator{
 
     @Override
     public String getNext() throws IOException {
-        return scanner.next();
+        String s = "";
+        while (scanner.hasNext()) {
+            s = scanner.next();
+            if (s.length() > 0)
+                break;
+        }
+        return s;
     }
 
     public StreamIterator setDelimiters(String delimiters) {
